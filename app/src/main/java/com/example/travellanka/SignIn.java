@@ -42,6 +42,7 @@ public class SignIn extends AppCompatActivity {
         String email = edtTextEmail.getText().toString().trim();
         String password = edtTextPassword.getText().toString().trim();
 
+        //check user credentials
         if (email.isEmpty()){
             edtTextEmail.setError("Please enter a email");
             edtTextEmail.requestFocus();
@@ -49,9 +50,8 @@ public class SignIn extends AppCompatActivity {
         }
         if(password.isEmpty()){
             edtTextPassword.setError("Please enter a password");
-            edtTextPassword.requestFocus;
+            edtTextPassword.requestFocus();
             return;
-        }
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             edtTextEmail.setError("Please enter valid email");
