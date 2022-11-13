@@ -47,10 +47,11 @@ public class SignIn extends AppCompatActivity {
             edtTextEmail.requestFocus();
             return;
         }
-        if (password.isEmpty()){
-            edtTextPassword.setError("Please enter your password");
-            edtTextPassword.requestFocus();
+        if(password.isEmpty()){
+            edtTextPassword.setError("Please enter a password");
+            edtTextPassword.requestFocus;
             return;
+        }
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             edtTextEmail.setError("Please enter valid email");
