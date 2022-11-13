@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "51024953574",
+    "project_id": "travel-lanka-8cd52",
+    "storage_bucket": "travel-lanka-8cd52.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51024953574:android:ebaae7c232445041a27b27",
+        "android_client_info": {
+          "package_name": "com.example.travellanka"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "51024953574-v8hm7dnb052ut0p4n4h19ee96e36an0q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYehFbKeEcUQ7S-CdU-0UaYada9-FKnCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "51024953574-v8hm7dnb052ut0p4n4h19ee96e36an0q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

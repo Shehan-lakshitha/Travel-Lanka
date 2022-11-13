@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/SHEHAN LAKSHITHA/Desktop/SUSL/HackX/App/TravelLanka/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1575" />
+        <entry key="..\:/Users/SHEHAN LAKSHITHA/Desktop/SUSL/HackX/App/TravelLanka/app/src/main/res/drawable-v24/signinbutton.xml" value="0.187" />
+        <entry key="..\:/Users/SHEHAN LAKSHITHA/Desktop/SUSL/HackX/App/TravelLanka/app/src/main/res/drawable/buttonmain.xml" value="0.1575" />
+        <entry key="..\:/Users/SHEHAN LAKSHITHA/Desktop/SUSL/HackX/App/TravelLanka/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1575" />
+        <entry key="..\:/Users/SHEHAN LAKSHITHA/Desktop/SUSL/HackX/App/TravelLanka/app/src/main/res/drawable/line.xml" value="0.1575" />
+        <entry key="..\:/Users/SHEHAN LAKSHITHA/Desktop/SUSL/HackX/App/TravelLanka/app/src/main/res/drawable/searchbutton.xml" value="0.187" />
+        <entry key="..\:/Users/SHEHAN LAKSHITHA/Desktop/SUSL/HackX/App/TravelLanka/app/src/main/res/drawable/signinloginback.xml" value="0.1575" />
+        <entry key="..\:/Users/SHEHAN LAKSHITHA/Desktop/SUSL/HackX/App/TravelLanka/app/src/main/res/drawable/signup.xml" value="0.1575" />
+        <entry key="..\:/Users/SHEHAN LAKSHITHA/Desktop/SUSL/HackX/App/TravelLanka/app/src/main/res/font/schadowfont.xml" value="0.27589743589743587" />
+        <entry key="..\:/Users/SHEHAN LAKSHITHA/Desktop/SUSL/HackX/App/TravelLanka/app/src/main/res/layout/activity_main.xml" value="0.2222222222222222" />
+        <entry key="..\:/Users/SHEHAN LAKSHITHA/Desktop/SUSL/HackX/App/TravelLanka/app/src/main/res/layout/activity_sign_in.xml" value="0.25" />
+        <entry key="..\:/Users/SHEHAN LAKSHITHA/Desktop/SUSL/HackX/App/TravelLanka/app/src/main/res/layout/activity_sign_in_logout.xml" value="0.16216216216216217" />
+        <entry key="..\:/Users/SHEHAN LAKSHITHA/Desktop/SUSL/HackX/App/TravelLanka/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="..\:/Users/SHEHAN LAKSHITHA/Desktop/SUSL/HackX/App/TravelLanka/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/SHEHAN LAKSHITHA/Desktop/SUSL/online couse/Anorid studio/TravelLanka/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
