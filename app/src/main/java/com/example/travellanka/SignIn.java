@@ -29,6 +29,8 @@ public class SignIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
+        initValue();
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,7 +55,7 @@ public class SignIn extends AppCompatActivity {
             edtTextPassword.requestFocus();
             return;
         }
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             edtTextEmail.setError("Please enter valid email");
             edtTextEmail.requestFocus();
             return;
@@ -64,10 +66,11 @@ public class SignIn extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                    Toast.makeText(SignIn.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignIn.this, "Login Successful", Toast.LENGTH_LONG).show();
                     startActivity(new Intent(SignIn.this,MainActivity.class));
+                    finish();
                 }else {
-                    Toast.makeText(SignIn.this, "Login Failed,Please check your credentials", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignIn.this, "Login Failed,Please try again", Toast.LENGTH_LONG).show();
                 }
             }
         });

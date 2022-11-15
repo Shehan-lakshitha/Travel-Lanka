@@ -108,17 +108,16 @@ public class SignUp extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()){
                                         Toast.makeText(SignUp.this, "Login Successful", Toast.LENGTH_LONG).show();
-
-
+                                        startActivity(new Intent(SignUp.this,SignIn.class));
+                                        finish();
                                     }else {
-                                        Toast.makeText(SignUp.this, "Login Failed", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(SignUp.this, "Login Failed,please try again", Toast.LENGTH_LONG).show();
                                     }
                                 }
                             });
 
-                            startActivity(new Intent(SignUp.this,SignIn.class));
                         }else{
-                            Toast.makeText(SignUp.this, "Login Failed", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SignUp.this, "Login Failed,Please try again", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
