@@ -30,6 +30,7 @@ public class SignIn extends AppCompatActivity {
         setContentView(R.layout.activity_sign_in);
 
         initValue();
+        mAuth = FirebaseAuth.getInstance();
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,19 +62,6 @@ public class SignIn extends AppCompatActivity {
             return;
         }
 
-        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                    Toast.makeText(SignIn.this, "Login Successful", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(SignIn.this,MainActivity.class));
-                    finish();
-                }else {
-                    Toast.makeText(SignIn.this, "Login Failed,Please try again", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
 
     }
 

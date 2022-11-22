@@ -30,9 +30,8 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        mAuth = FirebaseAuth.getInstance();
-
         initValue();
+        mAuth = FirebaseAuth.getInstance();
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,8 +39,6 @@ public class SignUp extends AppCompatActivity {
                 registerUser();
             }
         });
-
-
 
     }
 
@@ -97,27 +94,28 @@ public class SignUp extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+
                         if (task.isSuccessful()){
                             User user = new User(email,name);
 
-                            //todo check the error realtime database not working
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
+
                                     if (task.isSuccessful()){
-                                        Toast.makeText(SignUp.this, "Login Successful", Toast.LENGTH_LONG).show();
-                                        startActivity(new Intent(SignUp.this,SignIn.class));
-                                        finish();
+                                        Toast.makeText(SignUp.this, "Sign in successful", Toast.LENGTH_LONG).show();
+
+                                        Intent intent = new Intent(SignUp.this,SignIn.class);
+                                        startActivity(intent);
                                     }else {
-                                        Toast.makeText(SignUp.this, "Login Failed,please try again", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(SignUp.this, "Login failed, Please try again", Toast.LENGTH_LONG).show();
                                     }
                                 }
                             });
-
-                        }else{
-                            Toast.makeText(SignUp.this, "Login Failed,Please try again", Toast.LENGTH_LONG).show();
+                        }else {
+                            Toast.makeText(SignUp.this, "Login failed, Please try again", Toast.LENGTH_LONG).show();
                         }
                     }
                 });
