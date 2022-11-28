@@ -37,7 +37,7 @@ public class SignIn extends AppCompatActivity {
         });
     }
 
-
+    //method for user login
     private void userLogin(){
         String email = edtTextEmail.getText().toString().trim();
         String password = edtTextPassword.getText().toString().trim();
@@ -54,7 +54,7 @@ public class SignIn extends AppCompatActivity {
             return;
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            edtTextEmail.setError("Please enter valid email");
+            edtTextEmail.setError("Please enter a vaild email");
             edtTextEmail.requestFocus();
             return;
         }

@@ -45,7 +45,7 @@ public class SignUp extends AppCompatActivity {
 
     }
 
-
+    //method to initialize the buttons
     private void initValue(){
 
         edtTextName = findViewById(R.id.edtTextName);
@@ -59,6 +59,7 @@ public class SignUp extends AppCompatActivity {
     }
 
 
+    //method to register user
     private void registerUser(){
         String name = edtTextName.getText().toString().trim();
         String email = editTextEmail.getText().toString().trim();
@@ -66,7 +67,7 @@ public class SignUp extends AppCompatActivity {
 
 
         if (name.isEmpty()){
-            edtTextName.setError("Please Enter your Name");
+            edtTextName.setError("Please enter your name");
             edtTextName.requestFocus();
             return;
         }
