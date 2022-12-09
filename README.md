@@ -5,7 +5,7 @@ This app provides a wide and accurate explanation of almost all the well-known h
 # Authors
 •<a href=https://github.com/Shehan-lakshitha>Shehan Lakshitha</a>
 <br>
-•Sanuda senod
+•<a href=https://github.com/Sanuda3088>Sanuda senod</a>
 <br>
 •Prasanna Pushpakumara
 <br>
