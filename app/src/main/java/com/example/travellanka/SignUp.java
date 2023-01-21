@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUp extends AppCompatActivity {
@@ -25,13 +26,16 @@ public class SignUp extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
         initValue();
-        mAuth = FirebaseAuth.getInstance();
+
+        mAuth= FirebaseAuth.getInstance();
 
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,68 +61,60 @@ public class SignUp extends AppCompatActivity {
 
 
     //method to register user
-    private void registerUser(){
-        String name = edtTextName.getText().toString().trim();
-        String email = editTextEmail.getText().toString().trim();
-        String password =editTextPassword.getText().toString().trim();
 
+    private void registerUser(){
+        String name = edtTextName.toString().trim();
+        String email = edtTextName.toString().trim();
+        String password = editTextPassword.toString().trim();
 
         if (name.isEmpty()){
-            edtTextName.setError("Please Enter your Name");
+            edtTextName.setError("Please enter your name");
             edtTextName.requestFocus();
             return;
         }
         if (email.isEmpty()){
-            editTextEmail.setError("Please Enter your Email");
+            editTextEmail.setError("Please enter your email");
             editTextEmail.requestFocus();
             return;
         }
         if (password.isEmpty()){
-            editTextPassword.setError("Please Enter a Password");
-            editTextPassword.requestFocus();
-            return;
-        }
-        if (password.length()<6){
-            editTextPassword.setError("Min 6 characters");
+            editTextPassword.setError("Please enter password");
             editTextPassword.requestFocus();
             return;
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            editTextEmail.setError("Please Enter valid email");
+            editTextEmail.setError("Please enter a valid email");
             editTextEmail.requestFocus();
             return;
         }
 
+        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    User user = new User(email,password);
 
-
-        mAuth.createUserWithEmailAndPassword(email,password)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()){
-                            User user = new User(name,email);
-
-                            FirebaseDatabase.getInstance().getReference("Users")
-                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    FirebaseDatabase.getInstance().getReference("Users")
+                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                            .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()){
-                                        Toast.makeText(SignUp.this, "Sign in Successful", Toast.LENGTH_LONG).show();
-
-                                        Intent intent = new Intent(SignUp.this,SignIn.class);
-                                        startActivity(intent);
+                                        Toast.makeText(SignUp.this, "Sign up successfull", Toast.LENGTH_LONG).show();
+                                        startActivity(new Intent(SignUp.this,SignIn.class));
                                     }else {
-                                        Toast.makeText(SignUp.this, "Sign in Failed, Please try again", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(SignUp.this, "Sign up failed,Please try again", Toast.LENGTH_LONG).show();
                                     }
                                 }
                             });
-                        }else {
-                            Toast.makeText(SignUp.this, "Sign in Failed, Please try again", Toast.LENGTH_LONG).show();
-                        }
-                    }
-                });
+                }else {
+                    Toast.makeText(SignUp.this, "Sign up failed,Please try again", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
     }
+
 }
 
 

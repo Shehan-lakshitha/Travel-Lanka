@@ -22,7 +22,8 @@ public class SignIn extends AppCompatActivity {
     private Button btnLogin,btnFacebook,btnGoogle,btnTwitter;
     private EditText edtTextEmail,edtTextPassword;
 
-    private FirebaseAuth mAuth;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,40 +31,11 @@ public class SignIn extends AppCompatActivity {
         setContentView(R.layout.activity_sign_in);
 
         initValue();
-        mAuth = FirebaseAuth.getInstance();
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                userLogin();
-            }
-        });
-    }
-
-
-    private void userLogin(){
-        String email = edtTextEmail.getText().toString().trim();
-        String password = edtTextPassword.getText().toString().trim();
-
-        //check user credentials
-        if (email.isEmpty()){
-            edtTextEmail.setError("Please enter a email");
-            edtTextEmail.requestFocus();
-            return;
-        }
-        if(password.isEmpty()){
-            edtTextPassword.setError("Please enter a password");
-            edtTextPassword.requestFocus();
-            return;
-        }
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            edtTextEmail.setError("Please enter valid email");
-            edtTextEmail.requestFocus();
-            return;
-        }
 
 
     }
+
 
     //method to initialize buttons
     private void initValue(){

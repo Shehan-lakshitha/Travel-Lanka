@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "51024953574",
-    "project_id": "travel-lanka-8cd52",
-    "storage_bucket": "travel-lanka-8cd52.appspot.com"
+    "project_number": "457558671891",
+    "project_id": "travel-lanka-57ce4",
+    "storage_bucket": "travel-lanka-57ce4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:51024953574:android:ebaae7c232445041a27b27",
+        "mobilesdk_app_id": "1:457558671891:android:cfa9cc7f4d0f9bc8ddb5e6",
         "android_client_info": {
           "package_name": "com.example.travellanka"
         }
       },
       "oauth_client": [
         {
-          "client_id": "51024953574-v8hm7dnb052ut0p4n4h19ee96e36an0q.apps.googleusercontent.com",
+          "client_id": "457558671891-avvk5ojsj3d5qildvf9utsran2p0op2k.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDYehFbKeEcUQ7S-CdU-0UaYada9-FKnCA"
+          "current_key": "AIzaSyCM9VYZ8-OIV8Nq-E22zjS2eUsK0usv39c"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "51024953574-v8hm7dnb052ut0p4n4h19ee96e36an0q.apps.googleusercontent.com",
+              "client_id": "457558671891-avvk5ojsj3d5qildvf9utsran2p0op2k.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
