@@ -11,7 +11,7 @@ This app provides a wide and accurate explanation of almost all the well-known h
 <br>
 •<a href=https://github.com/ShankaVisal>Shanka Visal</a>
 <br>
-•Sachini Disala
+•<a href=https://github.com/desi98>Sachini Dishala</a>
 
 
 ## ScreenShots
