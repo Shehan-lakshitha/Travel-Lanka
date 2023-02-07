@@ -9,7 +9,7 @@ This app provides a wide and accurate explanation of almost all the well-known h
 <br>
 •Prasanna Pushpakumara
 <br>
-•Shanka Visal
+•<a href=https://github.com/ShankaVisal>Shanka Visal</a>
 <br>
 •Sachini Disala
 
