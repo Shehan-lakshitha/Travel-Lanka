@@ -34,10 +34,6 @@ public class MainActivity extends AppCompatActivity {
         firebaseFirestore = FirebaseFirestore.getInstance();
         recyclerViewProvince = findViewById(R.id.recycleViewProvince);
 
-        recyclerView();
-    }
-
-    private void recyclerView() {
         //Query
         Query query = firebaseFirestore.collection("provinces");
 
