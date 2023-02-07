@@ -59,12 +59,9 @@ public class SignUp extends AppCompatActivity {
         btnTwitter = findViewById(R.id.btnTwitter);
     }
 
-
-    //method to register user
-
     private void registerUser(){
         String name = edtTextName.toString().trim();
-        String email = edtTextName.toString().trim();
+        String email = editTextEmail.toString().trim();
         String password = editTextPassword.toString().trim();
 
         if (name.isEmpty()){
@@ -73,47 +70,19 @@ public class SignUp extends AppCompatActivity {
             return;
         }
         if (email.isEmpty()){
-            editTextEmail.setError("Please enter your email");
+            editTextEmail.setError("Enter your email");
             editTextEmail.requestFocus();
             return;
         }
         if (password.isEmpty()){
-            editTextPassword.setError("Please enter password");
+            editTextPassword.setError("Please enter a valid password");
             editTextPassword.requestFocus();
             return;
         }
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            editTextEmail.setError("Please enter a valid email");
-            editTextEmail.requestFocus();
-            return;
-        }
-
-        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
-                    User user = new User(email,password);
-
-                    FirebaseDatabase.getInstance().getReference("Users")
-                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                            .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if (task.isSuccessful()){
-                                        Toast.makeText(SignUp.this, "Sign up successfull", Toast.LENGTH_LONG).show();
-                                        startActivity(new Intent(SignUp.this,SignIn.class));
-                                    }else {
-                                        Toast.makeText(SignUp.this, "Sign up failed,Please try again", Toast.LENGTH_LONG).show();
-                                    }
-                                }
-                            });
-                }else {
-                    Toast.makeText(SignUp.this, "Sign up failed,Please try again", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-
     }
+
+
+
 
 }
 
