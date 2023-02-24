@@ -79,6 +79,18 @@ public class SignUp extends AppCompatActivity {
             editTextPassword.requestFocus();
             return;
         }
+
+        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+                    Toast.makeText(SignUp.this, "SignUp Successful", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(SignUp.this,MainActivity.class));
+                }else {
+                    Toast.makeText(SignUp.this, "SignUp Failed", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
 
