@@ -1,6 +1,6 @@
 # Travel-Lanka by <b> LegionX</b>
 This is a innovative app design to solve a the problems in traveling where people faces issues in finding the routes and the details of the historic and tourist attractions places.
-This app provides a wide and accurate explanation of almost all the well-known historical places.  
+This app provides a wide and accurate explanation of almost all the well-known historical places in Sri Lanka.  
 
 # Authors
 •<a href=https://github.com/Shehan-lakshitha>Shehan Lakshitha</a>
