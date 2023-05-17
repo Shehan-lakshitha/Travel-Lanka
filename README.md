@@ -19,7 +19,7 @@ This app provides a wide and accurate explanation of almost all the well-known h
 
 
 ## 🛠 Skills
-Android Studio, Firebase, Adobe XD...
+Android Studio, Java, Firebase, Adobe XD...
 
 
 ## Contributing
