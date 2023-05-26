@@ -7,7 +7,7 @@ This app provides a wide and accurate explanation of almost all the well-known h
 <br>
 •<a href=https://github.com/Sanuda3088>Sanuda senod</a>
 <br>
-•Prasanna Pushpakumara
+•<a href=https://github.com/UGPPKumara>Prasanna Pushpakumara</a>
 <br>
 •<a href=https://github.com/ShankaVisal>Shanka Visal</a>
 <br>
